@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/carbon_fibre.png);
+}
+#logo {
+    display: flex;
+    align-items: center;
+    margin: 0.8rem;
+}
+#logo span {
+    font-size: 1.5rem;
+    color: rgb(103, 241, 243);
+}
+#navbar a {
+    text-decoration: none;
+}
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    flex-wrap:wrap;
+    position: absolute;
+    right: 3ch;
+    
+}
+#navbar ul li a {
+    text-decoration: none;
+    padding: 0.2rem 0;
+    margin-left: 0.95rem;
+    color: rgb(189, 217, 241);
+    font-size: 1.2rem;
+    position: relative;
+}
+#navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #007bff;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+#navbar ul li a:hover::before {
+    width: 100%;
+}
+#navbar img {
+    width: 7ch;
+    height: 7ch;
+}
+#image {
+    width: 100%;
+}
+#skills {
+    background: url(https://www.toptal.com/designers/subtlepatterns/uploads/restaurant.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#skillsleft {
+    width: 45%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#skillsleft h1{
+    font-size: 3.5rem;
+    margin-left: 1.1rem;
+    margin-bottom: 3rem;
+    margin-top: 0.8rem;
+}
+#skillsleft p {
+    font-size: 1.5rem;
+    margin-left: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+#skillsright {
+    width: 54%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#skillsright div {
+    display: inline-block;
+    margin: 50px;
+}
+#skillsright p {
+    font-size: 1.5rem;
+}
+#skillsright img {
+    max-width: 120px;
+    max-height: 120px;
+}
+#about {
+    /* position: relative; */
+    background-image: url(https://i.pinimg.com/originals/14/73/7b/14737bcb224e3f2ecdae5752f09300d0.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aboutleft {
+    width: 45%;
+    display: inline-block;
+}
+#aboutleft img {
+    width: 100%;
+}
+#aboutright {
+    display: inline-block;
+    width: 45%;
+    background-color: #ffffff61;
+    padding: 5ch;
+    height: fit-content;
+}
+#aboutright #heading {
+    margin-bottom: 50px;
+}
+#aboutright h1 {
+    font-size: 3.8rem;
+}
+#aboutright p {
+    font-size: 1.8rem;
+}
+#contact{
+    background-image: url(static/moroccan-flower\ \(2\).png);
+}
+#socials {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.4rem;
+    margin: 1rem;
+}
+#socials div {
+    display: inline-flex; 
+    flex-direction: column;
+    align-items: center;
+}
+#socials img {
+    display: block;
+    width: 60px;
+    margin-bottom: 0.8rem;
+}
+#contact form h1 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+#contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact textarea,
+#contact input{
+    width: 50%;
+    margin: 10px;
+    font-size: 1.3rem;
+    padding: 0.5ch 1ch;
+}
+#contact label {
+    font-size: 1.3rem;
+}
+#contact button{
+    font-size: 1.3rem;
+    padding: 0.4em 1.1em;
+    background: rgb(0, 194, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#contact button:hover {
+    background: rgb(0, 170, 0);
+}
+
+
+@media (max-width:900px) {
+    #skills {
+        flex-direction: column;
+    }
+    #skillsright {
+        width: 90%;
+    }
+    #about {
+        flex-direction: column;
+    }
+    #aboutright {
+        width: 90%;
+    }
+}
+@media (max-width:550px) {
+    #navbar {
+        flex-direction: column-reverse;
+    }
+    #navbar div {
+        margin-bottom: 3rem;
+    }
+}
