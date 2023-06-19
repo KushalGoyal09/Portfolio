@@ -5,26 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="static/portfolio-removebg-preview.png" type="image/x-icon">
     <title>Kushal Goyal</title>
 </head>
 
 <body>
-    <nav id="navbar">
-        <a href="index.html">
-            <div id="logo">
-                <img src="static/portfolio-removebg-preview.png" alt="portfolio">
-                <span id="logo">Kushal Goyal</span>
-            </div>
-        </a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#skills">My skills</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav id="navbar">
+            <a href="index.html">
+                <div id="logo">
+                    <img src="static/portfolio-removebg-preview.png" alt="portfolio">
+                    <span id="logo">Kushal Goyal</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">My skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" id="nav-toggle"></i>
+        </nav>
+        <div id="link-dropdown">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">My skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <i class="fa-solid fa-arrow-up" id="top"></i>
     <img src="static/img3.jpg" alt="" id="image">
     <div id="skills">
         <section id="skillsleft">
@@ -88,7 +103,7 @@
             <label for="subject">Subject: </label>
             <input type="text" name="subject" id="subject" placeholder="Enter the Subject" required>
             <label for="message">Message: </label>
-            <textarea name="message" id="message" cols="20" rows="5" placeholder="Your Message goes here"></textarea>\
+            <textarea name="message" id="message" cols="20" rows="5" placeholder="Your Message goes here"></textarea>   
             <button type="submit">Submit</button>
         </form>
 
@@ -99,7 +114,7 @@
                     <p>goyalkushal04@gmail.com</p>
                 </div>
             </a>
-            <a href="https://github.com/KushalGoyal-Programmer" target="_blank">
+            <a href="https://github.com/KushalGoyal09" target="_blank">
                 <div>
                     <img src="static/github.jpg" alt="">
                     <p>Github</p>
@@ -125,6 +140,9 @@
             </a>
         </div>
     </div>
-</body>
 
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+</body>
 </html>
