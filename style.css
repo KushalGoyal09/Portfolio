@@ -1,298 +1,248 @@
-* {
+body {
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
-html {
-    scroll-behavior: smooth;
-}
-header {
-    position: fixed;
-    width: 100%;
-}
 #navbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/carbon_fibre.png); */
-    /* position: fixed; */
-    width: 100%;
-}
-#navbar::before {
-    content: "";
-    position: absolute;
-    background-color: #00000034;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-#logo {
-    display: flex;
-    align-items: center;
-    margin: 0.8rem;
-}
-#logo span {
-    font-size: 1.5rem;
-    color: rgb(149 166 255);
-}
-#navbar a {
-    text-decoration: none;
-}
-#navbar ul {
-    display: flex;
-    list-style-type: none;
-    flex-direction: row;
-    flex-wrap:wrap;
-    position: absolute;
-    right: 3ch;
-    
-}
-#navbar ul li a {
-    text-decoration: none;
-    padding: 0.2rem 0;
-    margin-left: 0.95rem;
-    color: rgb(70 169 255);
-    font-size: 1.2rem;
-    position: relative;
-}
-#navbar ul li a::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background: #007bff;
-    transition-property: width;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-}
-#navbar ul li a:hover::before {
-    width: 100%;
-}
-#navbar img {
-    width: 7ch;
-    height: 7ch;
-}
-
-#nav-toggle {
-    font-weight: 900;
-    font-size: 1.6rem;
-    transition: transform 0.5s ease;
-}
-.nav-toggle-rotate {
-    transform: rotate(90deg);
-}
-#link-dropdown{
-    font-size: 1.5rem;
-    background-color: white;
-    height: 0;  
+    /* max-height: 10vh; */
+    height: 10vh;
+    background-color: rgb(237, 231, 231);
+    /* background-color: #242582; */
     overflow: hidden;
-    transition: all 0.5s ease;
-    /* position: relative;
-    top: 82px; */
-}
-#link-dropdown a{
-    color: rgba(0, 0, 0, 0.614);
-    text-decoration: none;
-    
-}
-#link-dropdown a:hover {
-    color: #000000;
-}
-#link-dropdown li {
-    padding: 0.3rem;
-}
-#image {
-    width: 100%;
-}
-#skills {
-    background: url(https://www.toptal.com/designers/subtlepatterns/uploads/restaurant.png);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#skillsleft {
-    width: 45%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-#skillsleft h1{
-    font-size: 3.5rem;
-    margin-left: 1.1rem;
-    margin-bottom: 3rem;
-    margin-top: 0.8rem;
-}
-#skillsleft p {
-    font-size: 1.5rem;
-    margin-left: 1.1rem;
-    margin-bottom: 0.8rem;
-}
-#skillsright {
-    width: 54%;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-#skillsright div {
-    display: inline-block;
-    margin: 50px;
-}
-#skillsright p {
-    font-size: 1.5rem;
-}
-#skillsright img {
-    max-width: 120px;
-    max-height: 120px;
-}
-#about {
-    /* position: relative; */
-    background-image: url(https://i.pinimg.com/originals/14/73/7b/14737bcb224e3f2ecdae5752f09300d0.jpg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#aboutleft {
-    width: 45%;
-    display: inline-block;
-}
-#aboutleft img {
-    width: 100%;
-}
-#aboutright {
-    display: inline-block;
-    width: 45%;
-    background-color: #ffffff61;
-    padding: 5ch;
-    height: fit-content;
-}
-#aboutright #heading {
-    margin-bottom: 50px;
-}
-#aboutright h1 {
-    font-size: 3.8rem;
-}
-#aboutright p {
-    font-size: 1.8rem;
-}
-#contact{
-    background-image: url(static/moroccan-flower\ \(2\).png);
-}
-#socials {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0.4rem;
-    margin: 1rem;
-}
-#socials div {
-    display: inline-flex; 
-    flex-direction: column;
-    align-items: center;
-}
-#socials img {
-    display: block;
-    width: 60px;
-    margin-bottom: 0.8rem;
-}
-#contact form h1 {
-    text-align: center;
-    font-size: 2.1rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-}
-#contact form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#contact textarea,
-#contact input{
-    width: 50%;
-    margin: 10px;
-    font-size: 1.3rem;
-    padding: 0.5ch 1ch;
-    border-radius: 5px;
-}
-#contact label {
-    font-size: 1.3rem;
-}
-#contact button{
-    font-size: 1.3rem;
-    padding: 0.4em 1.1em;
-    background: rgb(0, 194, 0);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-#contact button:hover {
-    background: rgb(0, 170, 0);
-}
-#message {
-    resize: vertical;
-    min-height: 2rem;
-}
-#top {
-    font-size: 2rem;
-    font-weight: 900;
+.sticky {
     position: fixed;
-    bottom: 5vh;
-    right: 3vw;
-    background-color: aqua;
-    color: white;
-    width: 3rem;
-    height: 3rem;
-    justify-content: center;
+    /* top: 0;
+    width: 100%; */
+}
+
+#left {   
+    display: flex;
     align-items: center;
-    border-radius: 50%;
+    margin-left: 2vw;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#left img {
+    margin-top: 0px;
+}
+
+#left p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 1vw;
+    font-size: 2rem;
+    font-family: cursive;
+    font-weight: bolder;
+    /* color: white; */
+}
+
+#right {
+    position: relative;
+    left: 35vw;
+}
+
+#right ul {
+    display: flex;
+    list-style: none;
+}
+
+#right ul li {
+    margin-left: 2.5vw;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
     cursor: pointer;
-    display: none;
-    animation: scale-animation 2s infinite;
+    /* color: white; */
+    display: block;
+    margin-top: 1vh;
 }
-@keyframes scale-animation {
-    0% {
-      transform: scale(1); 
-    }
-    50% {
-      transform: scale(1.1); 
-    }
-    100% {
-      transform: scale(1); 
-    }
-  }
-@media (max-width:900px) {
-    #skills {
-        flex-direction: column;
-    }
-    #skillsright {
-        width: 90%;
-    }
-    #about {
-        flex-direction: column;
-    }
-    #aboutright {
-        width: 90%;
-    }
+
+hr {
+    position: relative;
+    color: black;
 }
-@media (max-width:600px) {
-    #navbar ul {
-        display: none;
-    }
-    #nav-toggle {
-        display: inline;
-    }
+
+.active {
+    color: blue;
+    text-decoration: underline;
 }
-@media (min-width:600px) {
-    #navbar ul {
-        display: inline-flex;
-    }
-    #nav-toggle {
-        display: none;
-    }
+
+#mySkills {
+    height: 70vh;
+    background-color: #ADADAD;
+    display: flex;
+}
+
+#mySkillsLeft {
+    width: 35%;
+    margin-left: 15vw;
+}
+
+#mySkillsLeft h1 {
+    color: #2E1114;
+    margin-top: 5vh;
+    margin-left: 2vw;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+#line {
+    border: 3px solid #2E1114;
+    margin-left: 2vw;
+    border-radius: 5px;
+    margin-top: 3vh;
+    width: 5vw;
+}
+
+#mySkillsLeft p {
+    color: #2E1114;
+    font-size: 1.5rem;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    font-weight: bolder;
+}
+
+#mySkillsLeft h2 {
+    color: #2E1114;
+    margin-left: 2vw;
+    margin-top: 4vh;
+    font-weight: bolder;
+}
+
+.lineBorder {
+    border: 3px solid #2E1114;
+    margin-left: 1vw;
+    border-radius: 5px;
+    width: 5.5vw;
+}
+
+#leftBorder {
+    position: relative;
+    top: 3vh;
+}
+
+#rightBorder {
+    margin-left: 6vw;
+}
+
+#mySkillsRight {
+    /* border: 2px solid black; */
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#skill12 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.mySkills-item {
+    height: 50vh;
+}
+
+#skill34 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.skills {
+    width: 50%;
+}
+
+.icon {
+    border: 2px solid #64485C;
+    width: 6.5vw;
+    height: 12vh;
+    margin-top: 2vh;
+    margin-left: 5vw;
+}
+
+.icon img {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.skills h2 {
+    margin-left: 3vw;
+    color: #2E1114;
+    margin-top: 2vh;
+}
+
+#about {
+    height: 90vh;
+    background-color: #b1a296;
+    display: flex;
+}
+
+#leftAbout {
+    width: 35%;
+}
+
+#leftAbout img {
+    margin-left: 10vw;
+    margin-top: 3vh;
+    height: 80vh;
+}
+
+#typedtext {
+    color: #2E1114;
+    font-family: cursive; 
+    font-size: 30px; 
+    margin: 10px 50px; 
+    margin-top: 3vh;
+    letter-spacing: 6px; 
+    font-weight: bolder;
+    margin-top: 15vh;
+    margin-left: 5vw;
+}
+
+#rightAbout {
+    width: 65%;
+}
+
+#rightAbout p {
+    font-size: 1.2rem;
+    color: #2E1114;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    font-weight: bolder;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-icons {
+    width: 100px;
+    height: 100px;
+}
+
+.contact-icons img {
+    height: 70px;
+    width: 70px;
+    padding-left: 20px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.contact-icons p {
+    font-size: 1.2rem;
+    margin-left: 0.5vw;
+}
+
+#secondImage {
+    height: 20%;
+}
+
+#gmailText {
+    position: relative;
+    right: 5vw;
 }
