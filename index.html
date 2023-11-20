@@ -1,152 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="shortcut icon" href="static/portfolio-removebg-preview.png" type="image/x-icon">
     <title>Kushal Goyal</title>
-    
 </head>
+
 <body>
-    
-
-        <div class="hi" id="navbar">
-            <div id="left">
-                <img src="Static/portfolio-removebg-preview.png" width="50px" height="50px" alt="Icon">
-                <p>My PortFolio</p>
-            </div>
-            <div id="right">
-                <ul id="list">
-                    <li class="list" id="list1">Home</li>
-                    <li class="list" id="list2">My Skills</li>
-                    <li class="list" id="list3">About</li>
-                    <li class="list" id="list4">Contact</li>
-                </ul>
-            </div>
-        </div>
-
-
-    <div id="body">
-
-        <div id="homeBody">
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <header>
+        <nav id="navbar">
+            <a href="index.html">
+                <div id="logo">
+                    <img src="static/portfolio-removebg-preview.png" alt="portfolio">
+                    <span id="logo">Kushal Goyal</span>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="Static/img3.jpg" height="30%" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Static/img1.jpg" id="secondImage" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Static/img2.jpg" height="20%" class="d-block w-100" alt="...">
-                  </div>
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">My skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" id="nav-toggle"></i>
+        </nav>
+        <div id="link-dropdown">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">My skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <i class="fa-solid fa-arrow-up" id="top"></i>
+    <!-- <img src="static/img3.jpg" alt="" id="image"> -->
+    <div class="slider">
+        <div class="slide">
+            <img src="static/img1 (2).jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="static/img2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="static/img3 (2).jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="static/img3.jpg" alt="">
+        </div>
+    </div>
+    <div id="skills">
+        <section id="skillsleft">
+            <h1>What I Know!</h1>
+            <p>
+                I am Kushal Goyal, CSE student at NSUT. I
+                am a Tech Enthusiast, Passionate and Hard-Working Person and here are my skills:
+            </p>
+        </section>
+        <section id="skillsright">
+            <div>
+                <img src="static/prog.jpg" alt="">
+                <p>Programming</p>
+            </div>
+            <div>
+                <img src="static/public-speaking.jpg" alt="">
+                <p>Public Speaking</p>
+            </div>
+            <div>
+                <img src="static/team.jpg" alt="">
+                <p>Team Work</p>
+            </div>
+            <div>
+                <img src="static/problem-solving.jpg" alt="">
+                <p>Problem Solving</p>
+            </div>
+        </section>
+    </div>
+    <div id="about">
+        <section id="aboutleft">
+            <img src="static/kgimg-removebg-preview.png" alt="">
+        </section>
+        <section id="aboutright">
+            <div id="heading">
+                <h1>Hello World!!</h1>
+                <h1>Hello to Readers_</h1>
+            </div>
+            <p>
+                My name is KUSHAL GOYAL. Being a tech enthusiastic I always had a natural curiosity of understanding,
+                learning and applying my computer science knowledge to create new, innovative and effective solutions of
+                real life problems.
+            </p>
+            <p>
+                I am currently a Computer Science Student at NSUT with the keen interest in coding and start-ups. I love
+                reading and learning about start-ups. I truly believe that if technology is used in right way, it can
+                bring so much positive effect on lives of the people. And my ultimate goal in life to make people's life
+                better.
+            </p>
+            <p>
+                My sources of energies are people around me and passion towards my work.
+            </p>
+        </section>
+    </div>
+    <div id="contact">
+        <form action="">
+            <h1>Get in Touch</h1>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+            <label for="subject">Subject: </label>
+            <input type="text" name="subject" id="subject" placeholder="Enter the Subject" required>
+            <label for="message">Message: </label>
+            <textarea name="message" id="message" cols="20" rows="5" placeholder="Your Message goes here"></textarea>   
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="socials">
+            <a href="mailto:goyalkushal04@gmail.com">
+                <div>
+                    <img src="static/gmail.jpg" alt="">
+                    <p>goyalkushal04@gmail.com</p>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-
-        </div>
-
-        <div id="mySkills">
-
-            <div class="mySkills-item" id="mySkillsLeft">
-                <h1>What I Know!</h1>
-                <div id="line"></div>
-                <p>I am Kushal Goyal, CSE student at NSUT. I <br> am a Tech Enthusiast, Passionate and Hard-Working Person and here are my skills:</p>
-                <div class="lineBorder" id="leftBorder"></div>
-                <h2>Explore</h2>
-                <div class="lineBorder" id="rightBorder"></div>
-            </div>
-
-            <div class="mySkills-item" id="mySkillsRight">
-
-                <div id="skill12">
-                      <div class="skills" id="skill1">
-                        <div class="icon"><img src="Static/prog.jpg" width="70px" height="60px" alt="icon"></div>
-                        <h2>Programming</h2>
-                      </div>
-                      <div class="skills" id="skill2">
-                        <div class="icon"><img src="Static/public-speaking.jpg" width="70px" height="60px" alt="icon"></div>
-                        <h2>Public Speaking</h2>
-                      </div>
+            </a>
+            <a href="https://github.com/KushalGoyal09" target="_blank">
+                <div>
+                    <img src="static/github.jpg" alt="">
+                    <p>Github</p>
                 </div>
-
-                <div id="skill34">
-                      <div class="skills" id="skill3">
-                        <div class="icon"><img src="Static/team.jpg" width="70px" height="60px" alt="icon"></div>
-                        <h2>Team Work</h2>
-                      </div>
-                      <div class="skills" id="skill4">
-                        <div class="icon"><img src="Static/problem-solving.jpg" width="70px" height="60px" alt="icon"></div>
-                        <h2>Problem Solving</h2>
-                      </div>
+            </a>
+            <a href="https://www.linkedin.com/in/kushal-goyal/" target="_blank">
+                <div>
+                    <img src="static/linkdin.jpg" alt="">
+                    <p>Linkdin</p>
                 </div>
-
-            </div>
-
+            </a>
+            <a href="https://twitter.com/Kushal__Goyal" target="_blank">
+                <div>
+                    <img src="static/twitter.jpg" alt="">
+                    <p>Twitter</p>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/kushal.io/" target="_blank">
+                <div>
+                    <img src="static/instagram.jpg" alt="">
+                    <p>Instagram</p>
+                </div>
+            </a>
         </div>
-
-        <hr>
-
-        <div id="about">
-            <div id="leftAbout">
-                <img src="Static/kushalimg-removebg-preview.png" alt="myphoto">
-            </div>
-            <div id="rightAbout">
-              <div id="typedtext"></div>
-              <p>My name is KUSHAL GOYAL.
-                Being a tech enthusiastic I always had a natural curiosity of understanding, learning and applying my computer science knowledge to create new, innovative and effective solutions of real life problems. </p>
-                
-              <p> I am currently a Computer Science Student at NSUT with the keen interest in coding and start-ups. I love reading and learning about start-ups. I truly believe that if technology is used in right way, it can bring so much positive effect on lives of the people. And my ultimate goal in life to make people's life better. </p>
-              <p> My sources of energies are people around me and passion towards my work.</p>
-            </div>
-        </div>
-
-        <hr>
-
-        <div id="footer">
-            <div class="contact-icons" id="gmail">
-              <img src="Static/gmail.jpg" alt="">
-              <p id="gmailText" style="margin-top: 1vh;">goyalkushal04@gmail.com</p>
-            </div>
-            <div class="contact-icons" id="twitter">
-              <img src="Static/twitter.jpg" alt="icon">
-              <p style="position: relative; left: 10px;">Twitter</p>
-            </div>
-            <div class="contact-icons" id="linked-in">
-              <img src="Static/linkdin.jpg" alt="icon">
-              <p>LinkedIn</p>
-            </div>
-            <div class="contact-icons" id="insta">
-              <img src="Static/instagram.jpg" alt="icon">
-              <p>Instagram</p>
-            </div>
-            <div class="contact-icons" id="github">
-              <img src="Static/github.jpg" alt="icon">
-              <p style="position: relative;left: 10px;">Github</p>
-            </div>
-        </div>
-
-        <hr style="margin-top: 5vh;">
-
     </div>
 
 
+    <!-- javascript -->
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,248 +1,370 @@
-body {
+* {
     margin: 0;
-    padding: 0; 
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
 }
 
 #navbar {
     display: flex;
-    /* max-height: 10vh; */
-    height: 10vh;
-    background-color: rgb(237, 231, 231);
-    /* background-color: #242582; */
-    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    /* background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/carbon_fibre.png); */
+    /* position: fixed; */
+    width: 100%;
 }
 
-.sticky {
-    position: fixed;
-    /* top: 0;
-    width: 100%; */
+#navbar::before {
+    content: "";
+    position: absolute;
+    background-color: #00000034;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
 }
 
-#left {   
+#logo {
     display: flex;
     align-items: center;
-    margin-left: 2vw;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    margin: 0.8rem;
 }
 
-#left img {
-    margin-top: 0px;
-}
-
-#left p {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 1vw;
-    font-size: 2rem;
-    font-family: cursive;
-    font-weight: bolder;
-    /* color: white; */
-}
-
-#right {
-    position: relative;
-    left: 35vw;
-}
-
-#right ul {
-    display: flex;
-    list-style: none;
-}
-
-#right ul li {
-    margin-left: 2.5vw;
-    font-family: cursive;
-    font-weight: bold;
+#logo span {
     font-size: 1.5rem;
-    cursor: pointer;
-    /* color: white; */
-    display: block;
-    margin-top: 1vh;
+    color: rgb(149 166 255);
 }
 
-hr {
-    position: relative;
-    color: black;
+#navbar a {
+    text-decoration: none;
 }
 
-.active {
-    color: blue;
-    text-decoration: underline;
-}
-
-#mySkills {
-    height: 70vh;
-    background-color: #ADADAD;
+#navbar ul {
     display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 3ch;
+
 }
 
-#mySkillsLeft {
-    width: 35%;
-    margin-left: 15vw;
+#navbar ul li a {
+    text-decoration: none;
+    padding: 0.2rem 0;
+    margin-left: 0.95rem;
+    color: rgb(70 169 255);
+    font-size: 1.2rem;
+    position: relative;
 }
 
-#mySkillsLeft h1 {
-    color: #2E1114;
-    margin-top: 5vh;
-    margin-left: 2vw;
-    font-family: cursive;
-    font-weight: bolder;
+#navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #007bff;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
-#line {
-    border: 3px solid #2E1114;
-    margin-left: 2vw;
-    border-radius: 5px;
-    margin-top: 3vh;
-    width: 5vw;
+#navbar ul li a:hover::before {
+    width: 100%;
 }
 
-#mySkillsLeft p {
-    color: #2E1114;
+#navbar img {
+    width: 7ch;
+    height: 7ch;
+}
+
+#nav-toggle {
+    font-weight: 900;
+    font-size: 1.6rem;
+    transition: transform 0.5s ease;
+}
+
+.nav-toggle-rotate {
+    transform: rotate(90deg);
+}
+
+#link-dropdown {
     font-size: 1.5rem;
-    margin-left: 2vw;
-    margin-top: 2vh;
-    font-weight: bolder;
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    /* position: relative;
+    top: 82px; */
 }
 
-#mySkillsLeft h2 {
-    color: #2E1114;
-    margin-left: 2vw;
-    margin-top: 4vh;
-    font-weight: bolder;
+#link-dropdown a {
+    color: rgba(0, 0, 0, 0.614);
+    text-decoration: none;
+
 }
 
-.lineBorder {
-    border: 3px solid #2E1114;
-    margin-left: 1vw;
-    border-radius: 5px;
-    width: 5.5vw;
+#link-dropdown a:hover {
+    color: #000000;
 }
 
-#leftBorder {
-    position: relative;
-    top: 3vh;
+#link-dropdown li {
+    padding: 0.3rem;
 }
 
-#rightBorder {
-    margin-left: 6vw;
+#image {
+    width: 100%;
 }
 
-#mySkillsRight {
-    /* border: 2px solid black; */
-    width: 65%;
+#skills {
+    background: url(https://www.toptal.com/designers/subtlepatterns/uploads/restaurant.png);
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#skillsleft {
+    width: 45%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
-#skill12 {
-    width: 100%;
-    height: 50%;
-    display: flex;
+#skillsleft h1 {
+    font-size: 3.5rem;
+    margin-left: 1.1rem;
+    margin-bottom: 3rem;
+    margin-top: 0.8rem;
 }
 
-.mySkills-item {
-    height: 50vh;
+#skillsleft p {
+    font-size: 1.5rem;
+    margin-left: 1.1rem;
+    margin-bottom: 0.8rem;
 }
 
-#skill34 {
-    width: 100%;
-    height: 50%;
-    display: flex;
+#skillsright {
+    width: 54%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.skills {
-    width: 50%;
+#skillsright div {
+    display: inline-block;
+    margin: 50px;
 }
 
-.icon {
-    border: 2px solid #64485C;
-    width: 6.5vw;
-    height: 12vh;
-    margin-top: 2vh;
-    margin-left: 5vw;
+#skillsright p {
+    font-size: 1.5rem;
 }
 
-.icon img {
-    margin-top: 2px;
-    margin-left: 5px;
-}
-
-.skills h2 {
-    margin-left: 3vw;
-    color: #2E1114;
-    margin-top: 2vh;
+#skillsright img {
+    max-width: 120px;
+    max-height: 120px;
 }
 
 #about {
-    height: 90vh;
-    background-color: #b1a296;
+    /* position: relative; */
+    background-image: url(https://i.pinimg.com/originals/14/73/7b/14737bcb224e3f2ecdae5752f09300d0.jpg);
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#leftAbout {
-    width: 35%;
+#aboutleft {
+    width: 45%;
+    display: inline-block;
 }
 
-#leftAbout img {
-    margin-left: 10vw;
-    margin-top: 3vh;
-    height: 80vh;
+#aboutleft img {
+    width: 100%;
 }
 
-#typedtext {
-    color: #2E1114;
-    font-family: cursive; 
-    font-size: 30px; 
-    margin: 10px 50px; 
-    margin-top: 3vh;
-    letter-spacing: 6px; 
-    font-weight: bolder;
-    margin-top: 15vh;
-    margin-left: 5vw;
+#aboutright {
+    display: inline-block;
+    width: 45%;
+    background-color: #ffffff61;
+    padding: 5ch;
+    height: fit-content;
 }
 
-#rightAbout {
-    width: 65%;
+#aboutright #heading {
+    margin-bottom: 50px;
 }
 
-#rightAbout p {
-    font-size: 1.2rem;
-    color: #2E1114;
-    margin-top: 5vh;
-    margin-left: 5vw;
-    font-weight: bolder;
+#aboutright h1 {
+    font-size: 3.8rem;
 }
 
-#footer {
+#aboutright p {
+    font-size: 1.8rem;
+}
+
+#contact {
+    background-image: url(static/moroccan-flower\ \(2\).png);
+}
+
+#socials {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.4rem;
+    margin: 1rem;
 }
 
-.contact-icons {
-    width: 100px;
-    height: 100px;
+#socials div {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact-icons img {
-    height: 70px;
-    width: 70px;
-    padding-left: 20px;
-    padding-top: 20px;
+#socials img {
+    display: block;
+    width: 60px;
+    margin-bottom: 0.8rem;
+}
+
+#contact form h1 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact textarea,
+#contact input {
+    width: 50%;
+    margin: 10px;
+    font-size: 1.3rem;
+    padding: 0.5ch 1ch;
+    border-radius: 5px;
+}
+
+#contact label {
+    font-size: 1.3rem;
+}
+
+#contact button {
+    font-size: 1.3rem;
+    padding: 0.4em 1.1em;
+    background: rgb(0, 194, 0);
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-.contact-icons p {
-    font-size: 1.2rem;
-    margin-left: 0.5vw;
+#contact button:hover {
+    background: rgb(0, 170, 0);
 }
 
-#secondImage {
-    height: 20%;
+#message {
+    resize: vertical;
+    min-height: 2rem;
 }
 
-#gmailText {
+#top {
+    font-size: 2rem;
+    font-weight: 900;
+    position: fixed;
+    bottom: 5vh;
+    right: 3vw;
+    background-color: aqua;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    animation: scale-animation 2s infinite;
+}
+
+.slider {
     position: relative;
-    right: 5vw;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    width: 100%;
+}
+
+@keyframes scale-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width:900px) {
+    #skills {
+        flex-direction: column;
+    }
+
+    #skillsright {
+        width: 90%;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #aboutright {
+        width: 90%;
+    }
+}
+
+@media (max-width:600px) {
+    #navbar ul {
+        display: none;
+    }
+
+    #nav-toggle {
+        display: inline;
+    }
+}
+
+@media (min-width:600px) {
+    #navbar ul {
+        display: inline-flex;
+    }
+
+    #nav-toggle {
+        display: none;
+    }
 }
